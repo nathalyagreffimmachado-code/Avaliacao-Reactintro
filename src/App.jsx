@@ -1,22 +1,23 @@
 import { useState } from 'react'
-import {route,routes} from 'route,routes./react-router-dom'
-import header from './components/Header'
-import footer from './components/Footer'
 import './App.css'
 import Home from './pages/Home'
-import Ex8 from './pages/Ex8'
 import Ex6 from './pages/Ex6'
+import { Route, Routes } from 'react-router-dom'
+import Header from './components/Header'
+import Exercicio8 from './pages/Ex8'
+import Footer from './components/Footer'
 
 function App() {
 
   return (
     <>
-<routes>
-  <route path="/"element={<Home/>} />
-    <route path="/Ex6"element={<Ex6/>} />
-      <route path="/Ex8"element={<Ex8/>} />
-</routes>
-<Footer></Footer>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Ex6" element={<Ex6 />} />
+        <Route path="/Ex8" element={<Exercicio8 />} />
+      </Routes>
+      <Footer />
     </>
   )
 }
